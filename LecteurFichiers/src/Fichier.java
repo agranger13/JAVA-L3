@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-public abstract class Fichier implements LecteurFichier{
+public abstract class Fichier{
 	protected File fichier;
 	
 	Fichier(String f){

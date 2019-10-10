@@ -1,7 +1,7 @@
 import java.io.FileInputStream;
 import java.io.IOException;
 
-public class FichierTXT extends Fichier{
+public class FichierTXT extends Fichier implements LecteurFichier{
 
 	FichierTXT(String f) {
 		super(f);
@@ -25,11 +25,11 @@ public class FichierTXT extends Fichier{
 	public String lireFichierPalindromique() throws IOException {
 		String lu = lireFichier();
 		String affichage = "";
-		System.out.println(lu.length());
 		
 		for(int i = 0; i<lu.length() ; i++) {
-			
-			affichage += lu.charAt(lu.length()-i-1);
+			if((int)lu.charAt(lu.length()-i-1)!= 10) {
+				affichage += lu.charAt(lu.length()-i-1);
+			}
 		}
 		return affichage;
 	}
