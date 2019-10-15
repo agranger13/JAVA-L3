@@ -9,17 +9,23 @@ package geometrie;
  *
  * @author licence
  */
-public class Rectangle extends FormeGeo {
+public class Rectangle implements FormeGeo {
 	public double longueur, largeur;
 	public Point coin;
 	
 	public Rectangle(double longueur, double largeur, Point coin) {
-		super(calculerCentre(coin,longueur,largeur));
 		this.longueur = longueur;
 		this.largeur = largeur;
 		this.coin = coin;
-
+	}
+	
+	public void dessiner() {
+		// TODO Auto-generated method stub
+		System.out.println("dessinnnne un rectangle");
+	}
 		
+	public static Point calculerCentre(Point p1, double largeur, double longueur) {
+		return new Point( p1.getX()+longueur/2 , p1.getY()+largeur/2);
 	}
 	
 	public double getLongueur() {
@@ -45,6 +51,5 @@ public class Rectangle extends FormeGeo {
 	public void setCoin(Point coin) {
 		this.coin = coin;
 	}
-	
    
 }

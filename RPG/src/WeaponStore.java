@@ -32,11 +32,15 @@ public class WeaponStore {
 	public void showStock () {
 		Iterator it = store.iterator();
 		Weapon temp;
+		int i=0;
 		while(it.hasNext()) {
 			temp = (Weapon) it.next();
+			i++;
+			System.out.println("\\" + i + "/" );
 			System.out.println(temp.ascii_art());
 			System.out.println("damage : " +temp.getDamage());
-			System.out.println("prix : " +this.price(temp));
+			System.out.println("prix : " +this.price(temp) + "\n");
+			
 		}	
 	}
 }
