@@ -1,13 +1,23 @@
 package Modele;
 
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Reader;
+import java.util.ArrayList;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
+
 public class TestModele {
 
 	public static void main(String[] args) {
 		Pokedeck myCollection = new Pokedeck();		
 		
-		Attack[] attacks = new Attack[2];
-		attacks[0] = new Attack("fire spin","strong attack of fire", 100);
-		attacks[1] = new Attack("fire spin","strong attack of fire", 100);
+		ArrayList<Attack> attacks = new ArrayList<Attack>();
+		attacks.add(new Attack("fire spin","strong attack of fire", 100));
+		attacks.add(new Attack("fire spin","strong attack of fire", 100));
 		Card cardPokemon = new PokemonCard("Charizard",
 				"image.png",
 				"fire",
@@ -31,8 +41,33 @@ public class TestModele {
 		myCollection.addCard(cardEnergy);
 		myCollection.addCard(cardPokemon);
 		myCollection.addCard(cardTrainer);
+		
+		myCollection.removeCard(cardTrainer);
+		
+		myCollection.getCard(1).setCardName("Squirtle");
+		
 		System.out.println("MY COLLECTION  \n" + myCollection.toString() + "\n");
 		
+		
+		Gson gson = new GsonBuilder().setPrettyPrinting().create();
+		try (FileWriter writer = new FileWriter("A:\\Alexis\\Programmation\\JAVA-L3\\Pokedeck\\test.json")) {
+			gson.toJson(myCollection, writer);
+		} catch (IOException e) {
+            e.printStackTrace();
+        }
+		
+		try (Reader reader = new FileReader("A:\\Alexis\\Programmation\\JAVA-L3\\Pokedeck\\test.json")) {
+			
+            // Convert JSON to JsonElement, and later to String
+			Pokedeck json = gson.fromJson(reader, Pokedeck.class);
+
+            String jsonInString = gson.toJson(json);
+			
+            System.out.println(jsonInString);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 	}
 
 }

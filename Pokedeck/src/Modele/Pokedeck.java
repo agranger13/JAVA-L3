@@ -1,7 +1,12 @@
 package Modele;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
+
+import com.google.gson.Gson;
+import com.google.gson.JsonIOException;
 
 public class Pokedeck {
 	ArrayList<Card> listCards;
@@ -26,6 +31,11 @@ public class Pokedeck {
 		listCards.remove(c);
 	}
 	
+	public Card getCard(int i) {
+		return listCards.get(i);
+	}
+	
+
 	public String toString() {
 		String pokedeckString = "";
 		
