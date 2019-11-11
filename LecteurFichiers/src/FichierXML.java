@@ -1,5 +1,5 @@
 
-public class FichierXML extends Fichier{
+public class FichierXML extends Fichier implements LecteurFichier{
 
 	FichierXML(String f) {
 		super(f);
@@ -28,7 +28,7 @@ public class FichierXML extends Fichier{
 	}
 
 	@Override
-	public void CompareFichier() {
+	public void compareFichierTo(Fichier f) {
 		// TODO Auto-generated method stub
 		
 	}

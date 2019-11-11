@@ -2,7 +2,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class FichierCSV extends Fichier{
+public class FichierCSV extends Fichier implements LecteurFichier{
 
 	FichierCSV(String f) {
 		super(f);
@@ -24,7 +24,7 @@ public class FichierCSV extends Fichier{
 	}
 
 	@Override
-	public void CompareFichier() {
+	public void compareFichierTo(Fichier f) {
 		// TODO Auto-generated method stub
 		
 	}
