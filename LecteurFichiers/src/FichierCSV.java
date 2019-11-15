@@ -22,7 +22,7 @@ public class FichierCSV extends Fichier implements LecteurFichier{
 	}
 
 	@Override
-	public void CompareFichier() {
+	public void compareFichierTo(Fichier f) {
 		// TODO Auto-generated method stub
 		
 	}
