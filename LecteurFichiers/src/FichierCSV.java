@@ -2,7 +2,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class FichierCSV extends Fichier{
+public class FichierCSV extends Fichier implements LecteurFichier{
 
 	FichierCSV(String f) {
 		super(f);
@@ -10,17 +10,15 @@ public class FichierCSV extends Fichier{
 	}
 
 	@Override
-	public String lireFichierReverse() {
-		return null;
+	public String lireFichierReverse() throws IOException {
 		// TODO Auto-generated method stub
-		
+		return null;
 	}
 
 	@Override
-	public String lireFichierPalindromique() {
-		return null;
+	public String lireFichierPalindromique() throws IOException {
 		// TODO Auto-generated method stub
-		
+		return null;
 	}
 
 	@Override

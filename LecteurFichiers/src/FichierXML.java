@@ -1,5 +1,6 @@
+import java.io.IOException;
 
-public class FichierXML extends Fichier{
+public class FichierXML extends Fichier implements LecteurFichier{
 
 	FichierXML(String f) {
 		super(f);
@@ -14,17 +15,15 @@ public class FichierXML extends Fichier{
 	}
 
 	@Override
-	public String lireFichierReverse() {
-		return null;
+	public String lireFichierReverse() throws IOException {
 		// TODO Auto-generated method stub
-		
+		return null;
 	}
 
 	@Override
-	public String lireFichierPalindromique() {
-		return null;
+	public String lireFichierPalindromique() throws IOException {
 		// TODO Auto-generated method stub
-		
+		return null;
 	}
 
 	@Override

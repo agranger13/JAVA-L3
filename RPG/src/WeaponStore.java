@@ -39,8 +39,9 @@ public class WeaponStore {
 			System.out.println("\\" + i + "/" );
 			System.out.println(temp.ascii_art());
 			System.out.println("damage : " +temp.getDamage());
-			System.out.println("prix : " +this.price(temp) + "\n");
+			System.out.println("prix : " +this.price(temp) + "$\n");
 			
 		}	
 	}
 }
+
