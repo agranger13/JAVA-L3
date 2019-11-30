@@ -3,26 +3,17 @@ package Modele;
 import java.util.ArrayList;
 
 public class PokemonCard extends Card{
-	private String type;
 	private int hp;
 	private ArrayList<Attack> attacks;
 	
 	public PokemonCard(String cardName, String image, String type, int hp, ArrayList<Attack> attacks) {
-		super(cardName, image);
-		this.type = type;
+		//super(cardName, image, type, "Pokemon");
+		super(cardName, image, type);
 		this.hp = hp;
 		this.attacks = attacks;
 	}
 
 	//Getters and Setters
-	public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
-	}
-
 	public int getHp() {
 		return hp;
 	}
@@ -57,7 +48,7 @@ public class PokemonCard extends Card{
 		
 		return 	"POKEMON"+
 				"\nname : " + super.getCardName() + 
-				"\ntype : " + this.type + 
+				"\ntype : " + super.getType() + 
 				"\nhp : " + this.hp +
 				"\nattacks : \n" + attackString;
 	}

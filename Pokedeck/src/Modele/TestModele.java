@@ -42,28 +42,32 @@ public class TestModele {
 		myCollection.addCard(cardPokemon);
 		myCollection.addCard(cardTrainer);
 		
-		myCollection.removeCard(cardTrainer);
+		//myCollection.removeCard(cardTrainer);
 		
 		myCollection.getCard(1).setCardName("Squirtle");
 		
 		System.out.println("MY COLLECTION  \n" + myCollection.toString() + "\n");
 		
 		
-		Gson gson = new GsonBuilder().setPrettyPrinting().create();
-		try (FileWriter writer = new FileWriter("A:\\Alexis\\Programmation\\JAVA-L3\\Pokedeck\\test.json")) {
+		GsonBuilder gBuild = new GsonBuilder().setPrettyPrinting();
+		gBuild.registerTypeAdapter(Card.class, new CardAdapterJson());
+		
+		Gson gson = gBuild.create();
+		try (FileWriter writer = new FileWriter(System.getProperty("user.dir")+"\\MaCollection.json")) {
 			gson.toJson(myCollection, writer);
 		} catch (IOException e) {
             e.printStackTrace();
         }
 		
-		try (Reader reader = new FileReader("A:\\Alexis\\Programmation\\JAVA-L3\\Pokedeck\\test.json")) {
+		try (Reader reader = new FileReader(System.getProperty("user.dir")+"\\MaCollection.json")) {
 			
             // Convert JSON to JsonElement, and later to String
 			Pokedeck json = gson.fromJson(reader, Pokedeck.class);
-
+			
             String jsonInString = gson.toJson(json);
 			
             System.out.println(jsonInString);
+            System.out.println("MY COLLECTION  \n" + myCollection.toString() + "\n");
 
         } catch (IOException e) {
             e.printStackTrace();

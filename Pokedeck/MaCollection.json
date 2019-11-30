@@ -1,0 +1,46 @@
+{
+  "listCards": [
+    {
+      "type": "EnergyCard",
+      "properties": {
+        "cardName": "energy",
+        "id": 3,
+        "image": "image.png",
+        "type": "water"
+      }
+    },
+    {
+      "type": "PokemonCard",
+      "properties": {
+        "hp": 120,
+        "attacks": [
+          {
+            "name": "fire spin",
+            "desc": "strong attack of fire",
+            "power": 100
+          },
+          {
+            "name": "fire spin",
+            "desc": "strong attack of fire",
+            "power": 100
+          }
+        ],
+        "cardName": "Squirtle",
+        "id": 1,
+        "image": "image.png",
+        "type": "fire"
+      }
+    },
+    {
+      "type": "TrainerCard",
+      "properties": {
+        "text": "Search your deck for up to 2 basic Energy cards",
+        "trainerRule": "You may play as many Item cards as you like",
+        "cardName": "Professor\u0027s Letter",
+        "id": 2,
+        "image": "image.png",
+        "type": "item"
+      }
+    }
+  ]
+}

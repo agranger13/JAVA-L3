@@ -1,26 +1,18 @@
 package Modele;
 
 public class TrainerCard extends Card{
-	private String type;
 	private String text;
 	private String trainerRule;
 	
 	public TrainerCard(String cardName, String image, String type, String text, String trainerRule) {
-		super(cardName, image);
-		this.type = type;
+		//super(cardName, image,type, "Trainer");
+		super(cardName, image, type);
 		this.text = text;
 		this.trainerRule = trainerRule;
 	}
 
 	
 	//Getters and Setters
-	public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
-	}
 
 	public String getText() {
 		return text;
@@ -41,7 +33,7 @@ public class TrainerCard extends Card{
 	public String toString() {
 		return 	"TRAINER" +
 				"\nname : " + super.getCardName() + 
-				"\ntype : " + type +
+				"\ntype : " + super.getType() +
 				"\ntext : " + text +
 				"\ntrainer rules : " + trainerRule;
 	}
