@@ -1,4 +1,4 @@
-package Modele;
+package Model;
 
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -13,7 +13,7 @@ import com.google.gson.JsonElement;
 public class TestModele {
 
 	public static void main(String[] args) {
-		Pokedeck myCollection = new Pokedeck();		
+		Pokedeck myCollection = new Pokedeck("myCollection");		
 		
 		ArrayList<Attack> attacks = new ArrayList<Attack>();
 		attacks.add(new Attack("fire spin","strong attack of fire", 100));

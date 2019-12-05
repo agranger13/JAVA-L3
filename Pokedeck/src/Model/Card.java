@@ -1,4 +1,4 @@
-package Modele;
+package Model;
 
 public abstract class Card {
 	private static int cardsNumber = 0;

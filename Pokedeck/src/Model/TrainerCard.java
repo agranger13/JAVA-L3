@@ -1,4 +1,4 @@
-package Modele;
+package Model;
 
 public class TrainerCard extends Card{
 	private String text;

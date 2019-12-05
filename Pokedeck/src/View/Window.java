@@ -1,4 +1,4 @@
-package Vue;
+package View;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 
 public class Window {
 	public static void main(String[] args) {
-		JPanel panel = new PanelSon();
+		JPanel panel = new MainPanel();
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		
 		JFrame window = new JFrame("hello world");
