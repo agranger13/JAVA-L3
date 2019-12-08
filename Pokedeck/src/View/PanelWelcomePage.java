@@ -36,41 +36,45 @@ public class PanelWelcomePage extends JPanel {
 		labelWelcome.setFont(new Font(labelWelcome.getFont().getName(),Font.PLAIN,80));
 		
 		GridBagConstraints gbc_labelWelcome = new GridBagConstraints();
+		gbc_labelWelcome.gridheight = 4;
 		gbc_labelWelcome.gridwidth = 6;
-		gbc_labelWelcome.anchor = GridBagConstraints.NORTH;
 		gbc_labelWelcome.insets = new Insets(0, 0, 5, 0);
 		gbc_labelWelcome.gridx = 0;
-		gbc_labelWelcome.gridy = 1;
+		gbc_labelWelcome.gridy = 0;
 		add(labelWelcome, gbc_labelWelcome);
 		
 		labelInput = new JLabel("Name of your Pokedeck :");
 		GridBagConstraints gbc_labelInput = new GridBagConstraints();
+		gbc_labelInput.gridheight = 3;
 		gbc_labelInput.anchor = GridBagConstraints.EAST;
 		gbc_labelInput.insets = new Insets(0, 0, 0, 5);
 		gbc_labelInput.gridx = 1;
-		gbc_labelInput.gridy = 6;
+		gbc_labelInput.gridy = 4;
 		add(labelInput, gbc_labelInput);
 		
 		nameOfPokedeck = new JTextArea(1,20);
 		GridBagConstraints gbc_nameOfPokedeck = new GridBagConstraints();
+		gbc_nameOfPokedeck.gridheight = 3;
 		gbc_nameOfPokedeck.insets = new Insets(0, 0, 0, 5);
 		gbc_nameOfPokedeck.gridx = 2;
-		gbc_nameOfPokedeck.gridy = 6;
+		gbc_nameOfPokedeck.gridy = 4;
 		add(nameOfPokedeck, gbc_nameOfPokedeck);
 		
 		buttonImport = new JButton("Import");
 		
 		GridBagConstraints gbc_buttonImport = new GridBagConstraints();
+		gbc_buttonImport.gridheight = 3;
 		gbc_buttonImport.insets = new Insets(0, 0, 0, 5);
 		gbc_buttonImport.gridx = 4;
-		gbc_buttonImport.gridy = 6;
+		gbc_buttonImport.gridy = 4;
 		add(buttonImport, gbc_buttonImport);
 		
 		buttonCreate = new JButton("Create");
 		GridBagConstraints gbc_buttonCreate = new GridBagConstraints();
+		gbc_buttonCreate.gridheight = 3;
 		gbc_buttonCreate.anchor = GridBagConstraints.WEST;
 		gbc_buttonCreate.gridx = 5;
-		gbc_buttonCreate.gridy = 6;
+		gbc_buttonCreate.gridy = 4;
 		add(buttonCreate, gbc_buttonCreate);
 		
 	}

@@ -19,7 +19,7 @@ public class CardAdapterJson implements JsonSerializer<Card>, JsonDeserializer<C
         JsonElement element = jsonObject.get("properties");
  
         try {
-            return context.deserialize(element, Class.forName("Modele." + type));
+            return context.deserialize(element, Class.forName("Model." + type));
         } catch (ClassNotFoundException cnfe) {
             throw new JsonParseException("Unknown element type: " + type, cnfe);
         }

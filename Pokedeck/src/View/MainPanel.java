@@ -19,7 +19,6 @@ public class MainPanel extends JPanel{
 	private Image img;
 	private JPanel cardPanel = new JPanel();
 	private CardLayout cardLayout = new CardLayout();
-	private Pokedeck pokedeck;
 	private Controleur c;	
 	
 	MainPanel(){

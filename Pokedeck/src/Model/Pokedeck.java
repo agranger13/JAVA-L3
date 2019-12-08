@@ -40,6 +40,10 @@ public class Pokedeck {
 		return listCards.get(i);
 	}
 	
+	public int getLength() {
+		return listCards.size();
+	}
+	
 	public String getName() {
 		return name;
 	}

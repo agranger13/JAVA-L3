@@ -31,6 +31,7 @@ public class Controleur implements ActionListener{
 		}else if(e.getSource() == panelWelcome.getButtonImport()) {
 			Pokedeck myPoke = Pokedeck.importPokecdeck(panelWelcome.getNameOfPokedeck().getText());
 			if(myPoke != null) {
+				panelViewCard.initView(myPoke);
 				panelMain.nextCard();
 			}else {
 				System.out.println("wrong name");
