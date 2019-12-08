@@ -1,4 +1,27 @@
 {
   "name": "test",
-  "listCards": []
+  "listCards": [
+    {
+      "type": "PokemonCard",
+      "properties": {
+        "hp": 20,
+        "attacks": [],
+        "cardName": "Charmander",
+        "id": 1,
+        "image": "",
+        "type": "Fire"
+      }
+    },
+    {
+      "type": "TrainerCard",
+      "properties": {
+        "text": "catch Pokemon",
+        "trainerRule": "",
+        "cardName": "PokeBall",
+        "id": 3,
+        "image": "",
+        "type": "item"
+      }
+    }
+  ]
 }

@@ -10,7 +10,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
-import Controler.Controleur;
+import Controler.Controler;
 
 import java.awt.Insets;
 
@@ -79,7 +79,7 @@ public class PanelWelcomePage extends JPanel {
 		
 	}
 	
-	public void addListenerButtons(Controleur c) {
+	public void addListenerButtons(Controler c) {
 		buttonImport.addActionListener(c);
 		buttonCreate.addActionListener(c);
 	}

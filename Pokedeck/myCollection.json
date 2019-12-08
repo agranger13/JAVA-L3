@@ -1,15 +1,6 @@
 {
-  "name": "MaCollection",
+  "name": "myCollection",
   "listCards": [
-    {
-      "type": "EnergyCard",
-      "properties": {
-        "cardName": "energy2",
-        "id": 3,
-        "image": "image.png",
-        "type": "water"
-      }
-    },
     {
       "type": "PokemonCard",
       "properties": {
@@ -30,6 +21,15 @@
         "id": 1,
         "image": "image.png",
         "type": "fire"
+      }
+    },
+    {
+      "type": "EnergyCard",
+      "properties": {
+        "cardName": "energy",
+        "id": 3,
+        "image": "image.png",
+        "type": "water"
       }
     },
     {
