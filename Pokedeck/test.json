@@ -5,7 +5,13 @@
       "type": "PokemonCard",
       "properties": {
         "hp": 20,
-        "attacks": [],
+        "attacks": [
+          {
+            "name": "Fire Spin",
+            "desc": "Destroy all ",
+            "power": 30
+          }
+        ],
         "cardName": "Charmander",
         "id": 1,
         "image": "",
@@ -21,6 +27,24 @@
         "id": 3,
         "image": "",
         "type": "item"
+      }
+    },
+    {
+      "type": "EnergyCard",
+      "properties": {
+        "cardName": "Energy",
+        "id": 1,
+        "image": "",
+        "type": "Fire"
+      }
+    },
+    {
+      "type": "EnergyCard",
+      "properties": {
+        "cardName": "Energy",
+        "id": 2,
+        "image": "",
+        "type": "Water"
       }
     }
   ]

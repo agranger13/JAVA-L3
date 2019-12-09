@@ -20,11 +20,13 @@ import Model.Pokedeck;
 
 public class MainPanel extends JPanel{
 	private Image img;
-	private JPanel cardPanel = new JPanel();
+	private JPanel cardPanel;
 	private CardLayout cardLayout = new CardLayout();
+	private JPanel panelCardChoice;
 	private Controler c1;
 	private ControlerCard c2;
 	private Controler c3;
+	
 	private PanelViewCards panelLeft;
 	private PanelCreateCard panelRight;
 	private PanelWelcomePage panelWelcome;
@@ -33,11 +35,12 @@ public class MainPanel extends JPanel{
 	private JButton buttonSave;
 	
 	MainPanel(){
+		cardPanel = new JPanel();
 		cardPanel.setLayout(cardLayout);
 		
 		panelWelcome = new PanelWelcomePage();
 		
-		JPanel panelCardChoice = new JPanel();
+		panelCardChoice = new JPanel();
 		panelLeft = new PanelViewCards();
 		panelRight = new PanelCreateCard();
 		c1 = new ControlerWelcome(panelWelcome, panelLeft, this);
@@ -51,13 +54,16 @@ public class MainPanel extends JPanel{
 		
 		buttonHome = new JButton("Home");
 		buttonSave = new JButton("Save my Pokedeck");
-		panelCardChoice.add(buttonHome);
-		panelCardChoice.add(buttonSave);
+		panelCardChoice.add(buttonHome, BorderLayout.SOUTH);
+		panelCardChoice.add(buttonSave, BorderLayout.SOUTH);
 		buttonHome.addActionListener(c1);
 		buttonSave.addActionListener(c1);
 		
 		cardPanel.add(panelCardChoice,"listCard");
 		add(cardPanel);
+		
+		c2 = new ControlerCard( panelLeft, panelRight,this);
+		c3 = new ControlerEditCreate( panelLeft, panelRight, this);
 	}
 
 	
@@ -77,13 +83,12 @@ public class MainPanel extends JPanel{
     }
 	
 	public void nextCard() {
-		cardLayout.next(cardPanel);
-		c2 = new ControlerCard( panelLeft, panelRight,this);
-		c3 = new ControlerEditCreate( panelLeft, panelRight, this);
+		cardLayout.show(cardPanel,"listCard");
 	}
 	
 	public void previousCard() {
-		cardLayout.first(cardPanel);
+		
+		cardLayout.show(cardPanel,"welcome");
 	}
 	
 	public void actualizeListener() {

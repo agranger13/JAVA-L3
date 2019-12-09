@@ -28,14 +28,16 @@ public class ControlerWelcome extends Controler{
 			Pokedeck myPoke = Pokedeck.importPokecdeck(panelWelcome.getNameOfPokedeck().getText());
 			if(myPoke != null) {
 				panelViewCard.initView(myPoke);
+				panelMain.actualizeListener();
 				panelMain.nextCard();
 			}else {
 				System.out.println("wrong name");
 			}
 		}else if (e.getSource() == panelMain.getButtonHome()) {
+			panelViewCard.remove(0);
 			panelMain.previousCard();
 			panelMain.revalidate();
-			panelMain.getIgnoreRepaint();
+			panelMain.repaint();
 		}else if (e.getSource() == panelMain.getButtonSave()) {
 			Pokedeck.savePokedeck(panelViewCard.getMyPoke());
 		}

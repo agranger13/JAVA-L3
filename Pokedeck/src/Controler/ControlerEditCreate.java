@@ -20,9 +20,11 @@ public class ControlerEditCreate extends Controler{
 	public ControlerEditCreate(PanelViewCards panelViewCard, PanelCreateCard panelCreateCard, MainPanel mainPanel) {
 		super(panelViewCard, panelCreateCard, mainPanel);
 		panelCreateCard.addListenerAllButtons(this);
+		panelCreateCard.setICard(-1);
 	}
 
 	public void actionPerformed(ActionEvent e) {
+		System.out.println("controleur");
 		JButton[] buttonPokemon = panelCreateCard.getActionButtonsPokemon();
 		JButton[] buttonEnergy = panelCreateCard.getActionButtonsEnergy();
 		JButton[] buttonTrainer = panelCreateCard.getActionButtonsTrainer();
