@@ -18,6 +18,14 @@ public abstract class Card {
 	
 	public abstract String toString();
 	
+	public static String toHTML(String input) {
+		String output = input.replaceAll("\n", "<br/>");
+		output = output.replaceAll("\t", "&nbsp;&nbsp;&nbsp;&nbsp;");
+		output =  "<html><p>" + output + "</p></html>";
+		return output;
+	
+	}
+	
 	//Getters and Setters
 	public String getCardName() {
 		return cardName;

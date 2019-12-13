@@ -38,13 +38,7 @@ public class PokemonCard extends Card{
 	}
 
 	public String toString() {
-		String attackString = "";
-		for(int i =1; i<= this.attacks.size();i++) {
-			attackString += "\tattack"+i+" : " + this.attacks.get(i-1).toString();
-			if(i< this.attacks.size()) {
-				attackString += "\n";
-			}
-		}
+		String attackString = attacksToSTring();
 		
 		return 	"POKEMON"+
 				"\nname : " + super.getCardName() + 
@@ -52,7 +46,16 @@ public class PokemonCard extends Card{
 				"\nhp : " + this.hp +
 				"\nattacks : \n" + attackString;
 	}
-
 	
+	public String attacksToSTring() {
+		String attackString = "";
+		for(int i =1; i<= this.attacks.size();i++) {
+			attackString += "\tattack"+i+" : " + this.attacks.get(i-1).toString();
+			if(i< this.attacks.size()) {
+				attackString += "\n";
+			}
+		}
+		return attackString;
+	}
 	
 }
