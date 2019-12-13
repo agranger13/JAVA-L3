@@ -2,37 +2,9 @@
   "name": "test",
   "listCards": [
     {
-      "type": "PokemonCard",
-      "properties": {
-        "hp": 20,
-        "attacks": [
-          {
-            "name": "Fire Spin",
-            "desc": "Destroy all ",
-            "power": 30
-          }
-        ],
-        "cardName": "Charmander",
-        "id": 1,
-        "image": "",
-        "type": "Fire"
-      }
-    },
-    {
-      "type": "TrainerCard",
-      "properties": {
-        "text": "catch Pokemon",
-        "trainerRule": "",
-        "cardName": "PokeBall",
-        "id": 3,
-        "image": "",
-        "type": "item"
-      }
-    },
-    {
       "type": "EnergyCard",
       "properties": {
-        "cardName": "Energy",
+        "cardName": "Energy2",
         "id": 1,
         "image": "",
         "type": "Fire"
@@ -45,6 +17,26 @@
         "id": 2,
         "image": "",
         "type": "Water"
+      }
+    },
+    {
+      "type": "EnergyCard",
+      "properties": {
+        "cardName": "Energy3",
+        "id": 1,
+        "image": "",
+        "type": "Fire"
+      }
+    },
+    {
+      "type": "PokemonCard",
+      "properties": {
+        "hp": 40,
+        "attacks": [],
+        "cardName": "charmander",
+        "id": 1,
+        "image": "",
+        "type": "fire"
       }
     }
   ]

@@ -44,7 +44,7 @@ public class MainPanel extends JPanel{
 		panelLeft = new PanelViewCards();
 		panelRight = new PanelCreateCard();
 		c1 = new ControlerWelcome(panelWelcome, panelLeft, this);
-		this.img = new ImageIcon(System.getProperty("user.dir")+"\\ressources\\BG_Pokedeck.png").getImage();
+		this.img = new ImageIcon(System.getProperty("user.dir")+"\\resources\\BG_Pokedeck.png").getImage();
 		cardPanel.setBackground(new Color(0,0,0,0));
 		cardPanel.add(panelWelcome,"welcome");
 		
