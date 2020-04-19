@@ -22,7 +22,6 @@ import java.awt.Dimension;
 
 public class PanelCreateCard extends JPanel {
 	private String []arrayCard = {"Pokemon","Energy","Trainer"};
-	private JComboBox comboCard;
 	private JTabbedPane panelCard;
 	
 	private JPanel panelPokemon;

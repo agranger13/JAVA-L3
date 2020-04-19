@@ -3,7 +3,6 @@ package Model;
 public class EnergyCard extends Card{
 	
 	public EnergyCard(String cardName, String image, String type) {
-		//super(cardName, image, type, "Energy");
 		super(cardName, image, type);
 	}
 

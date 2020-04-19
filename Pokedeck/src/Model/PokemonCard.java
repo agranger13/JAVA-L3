@@ -7,7 +7,6 @@ public class PokemonCard extends Card{
 	private ArrayList<Attack> attacks;
 	
 	public PokemonCard(String cardName, String image, String type, int hp, ArrayList<Attack> attacks) {
-		//super(cardName, image, type, "Pokemon");
 		super(cardName, image, type);
 		this.hp = hp;
 		this.attacks = attacks;

@@ -5,7 +5,6 @@ public class TrainerCard extends Card{
 	private String trainerRule;
 	
 	public TrainerCard(String cardName, String image, String type, String text, String trainerRule) {
-		//super(cardName, image,type, "Trainer");
 		super(cardName, image, type);
 		this.text = text;
 		this.trainerRule = trainerRule;

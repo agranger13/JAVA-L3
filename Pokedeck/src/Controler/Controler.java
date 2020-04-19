@@ -17,13 +17,6 @@ public abstract class Controler implements ActionListener{
 	protected PanelCreateCard panelCreateCard;
 	protected MainPanel panelMain;
 	
-	public Controler(PanelWelcomePage panelWelcome, PanelViewCards panelViewCard, PanelCreateCard panelCreateCard, MainPanel panelMain) {
-		this.panelWelcome = panelWelcome;
-		this.panelViewCard = panelViewCard;
-		this.panelMain = panelMain;
-		this.panelCreateCard = panelCreateCard;
-	}
-	
 	public Controler(PanelWelcomePage panelWelcome, PanelViewCards panelViewCard, MainPanel panelMain) {
 		this.panelWelcome = panelWelcome;
 		this.panelViewCard = panelViewCard;
@@ -34,11 +27,6 @@ public abstract class Controler implements ActionListener{
 		this.panelViewCard = panelViewCard;
 		this.panelCreateCard = panelCreateCard;
 		this.panelMain = panelMain;
-	}
-
-	public Controler(PanelViewCards panelViewCard, PanelCreateCard panelCreateCard) {
-		this.panelViewCard = panelViewCard;
-		this.panelCreateCard = panelCreateCard;
 	}
 
 	public abstract void actionPerformed(ActionEvent e);

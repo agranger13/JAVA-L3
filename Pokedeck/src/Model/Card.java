@@ -6,14 +6,12 @@ public abstract class Card {
 	private int id;
 	private String image;
 	private String type;
-	private String classCard;
 	
 	public Card(String cardName, String image, String type) {
 		this.cardName = cardName;
 		this.id = ++cardsNumber;
 		this.image = image;
 		this.type = type;
-		//this.classCard = classCard;
 	}
 	
 	public abstract String toString();
